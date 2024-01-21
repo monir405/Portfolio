@@ -1,0 +1,397 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Navigation Bar Styles */
+#navbar {
+  background-color:
+#333;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+}
+
+.navbar-brand {
+font-weight: bold;
+color: white;
+}
+
+.nav-links {
+display: flex;
+}
+
+#navbar a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+color: #ddd;
+}
+
+/* Section Styling */
+section {
+padding: 20px;
+margin-top: 20px;
+}
+
+/* About Section */
+#about {
+background-color: white;
+text-align: center;
+padding: 60px;
+font-size: 1.2em;
+}
+
+#about h1 {
+margin-bottom: 20px;
+}
+
+#about p {
+max-width: 600px;
+margin: auto;
+}
+
+.typing-animation {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5em; /* Adjust as needed */
+  width: 60%; /* Set the maximum width for the text */
+  animation: typing 4s steps(30, end) infinite;
+}
+
+/* Typing keyframe */
+@keyframes typing {
+  0%, 100% { width: 0 }
+  50% { width: 100% }
+}
+
+.about-content {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Spaces out the text and image */
+  padding: 20px; /* Add padding as necessary */
+}
+
+.about-text {
+  flex: 1; /* Takes up 50% of the space */
+  padding-right: 20px; /* Adds some space between the text and the image */
+}
+
+.about-image {
+  flex: 1; /* Takes up 50% of the space */
+  /* Style your image as needed */
+}
+
+.about-image img {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners to your image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column; /* Stacks the items vertically on smaller screens */
+  }
+
+  .about-text, .about-image {
+      flex: none; /* Removes the flex sizing */
+      width: 100%; /* Full width */
+      padding: 10px 0; /* Adjust padding for smaller screens */
+  }
+}
+
+
+/* Qualifications Section */
+@keyframes floatAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.education-item, .certification-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.education-item:hover, .certification-item:hover {
+  animation: floatAnimation 3s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Optional: Enhanced shadow on hover */
+}
+
+/* Rest of your styles */
+
+
+/* Rest of your styles */
+
+#qualifications {
+  
+  padding: 40px 0;
+  color: #333;
+}
+#qualifications {
+  background-color: #e0f4f4; /* Soft blue */
+  /* Other styles for qualifications */
+}
+
+/* Skills Section */
+.skills-section {
+  background-color: #d6e6e6;; /* Earthy green */
+  /* Other styles for skills */
+}
+#qualifications .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+#qualifications h2 {
+  font-size: 2em; /* Adjust the size as needed */
+  color: #000000; /* Black color */
+  text-align: center; /* Center alignment */
+  margin-bottom: 20px;
+}
+
+/* Rest of your styles */
+
+
+.education-section, .certification-section {
+  margin-bottom: 30px;
+}
+
+.education-item, .certification-item {
+  background-color: white;
+  margin: 15px auto; /* Centers the box horizontally with automatic margins */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 50%; /* Smaller width for each box */
+  text-align: center; /* Center-aligns the text */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .education-item, .certification-item {
+      width: 80%; /* Slightly larger width on smaller screens */
+  }
+}
+
+
+.education-item h3, .certification-item h3 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.edu-institution, .cert-institution {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  #qualifications h2 {
+      text-align: center;
+  }
+  .education-item, .certification-item {
+      padding: 15px;
+  }
+}
+.skills-section {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.skills-section:hover {
+  transform: translateY(-10px); /* Creates the floating effect by moving the box up on hover */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Enhances shadow on hover for depth */
+}
+.skills-section h2 {
+  font-size: 2em;
+  color: #000000; /* Black color */
+  text-align: center; /* Center alignment */
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0;
+  text-align: center; /* Center align the skill items */
+}
+
+.skills-list li {
+  display: inline-block; /* Display skills inline */
+  margin: 5px 10px;
+  padding: 5px 15px;
+  background-color: #f4f4f4; /* Light background for each skill */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+  background-color: #e9ecef; /* Slightly darker on hover */
+}
+
+
+/* Projects Section */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 40px; /* Increased margin */
+  /* ... other styles ... */
+}
+
+
+
+
+#projects {
+  background-color: #f4f2f7; /* Background color for the Projects section */
+  text-align: center;
+  padding: 40px 0;
+}
+
+#projects h2 {
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .project-item {
+      width: 100%; /* Full width for smaller screens */
+  }
+}
+.project-item {
+  background-color: white;
+  margin: 15px auto; /* Centers the box and maintains margin on top and bottom */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 60%; /* Adjust this value as needed */
+  width: calc(50% - 40px); /* Ensures the width doesn’t exceed the max-width */
+  margin-bottom: 20px;
+}
+
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Rest of your CSS */
+
+
+.project-item ul {
+  list-style: inside square; /* Choose the style that fits your design */
+  padding-left: 20px;
+  text-align: left;
+}
+
+.project-item ul li {
+  margin-bottom: 10px;
+  /* Additional styling if needed */
+}
+
+/* Rest of your CSS */
+
+
+ /* Experiences Section */
+#experiences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusted for consistent spacing */
+  background-color: #e9ecef;
+  padding: 20px;
+}
+#experience {
+  background-color: #f5f5f5; /* Warm gray */
+  /* Other styles for experience */
+}
+
+
+#experiences h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%; /* Ensure the header spans the full width */
+}
+
+/* Experience Cards - Styled like Projects/Qualifications */
+.experiences-category {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px; /* Adjusted for consistent spacing */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: calc(50% - 14px); /* Adjust width for 2 cards per row */
+  box-sizing: border-box;
+}
+
+/* Adjust font size for list items if necessary */
+.experiences-category ul li {
+  font-size: 14px; /* Example font size, adjust as needed */
+  margin-bottom: 5px;
+}
+
+/* Link styling */
+.experiences-category:hover {
+  transform: translateY(-10px); /* Creates the floating effect by moving the box up on hover */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Enhances shadow on hover for depth */
+}
+.experiences-category a {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.experiences-category p {
+  margin: 10px 0;
+}
+
+.experiences-category ul {
+  padding: 0;
+}
+
+@media (max-width: 960px) {
+  .experiences-category {
+    width: 100%; /* 1 column for smaller screens */
+  }
+}
+
+#contact {
+  /* Contact Section */
+  
+  background-color: #e0f4f4;
+    padding: 2rem;
+    text-align: center;
+  }
+  .section {
+      padding: 40px 0;
+      color: #333;
+      font-family: 'Arial', sans-serif; /* Replace with your preferred font */
+  }
+  .contact-section:hover {
+    transform: translateY(-10px); /* Creates the floating effect by moving the box up on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Enhances shadow on hover for depth */
+  }
