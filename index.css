@@ -92,17 +92,26 @@ margin-bottom: 20px;
   height: auto; /* Maintains the aspect ratio */
   border-radius: 8px; /* Optional: adds rounded corners to your image */
 }
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .about-content {
-      flex-direction: column; /* Stacks the items vertically on smaller screens */
-  }
-  .about-text, .about-image {
-      flex: none; /* Removes the flex sizing */
-      width: 100%; /* Full width */
-      padding: 10px 0; /* Adjust padding for smaller screens */
-  }
+.social-media-links {
+  margin-top: 10px; /* Space above the links */
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
 }
+
+.social-media-links a {
+  margin-right: 10px; /* Space between each link */
+}
+
+.social-media-links a:last-child {
+  margin-right: 0; /* No extra space after the last link */
+}
+
+.social-media-links img {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+}
+
+
 
 /* Qualifications Section */
 @keyframes floatAnimation {
@@ -158,15 +167,7 @@ margin-bottom: 20px;
   margin-bottom: 5px;
 }
 /* Responsive layout */
-@media (max-width: 768px) {
-  #education h2 {
-      text-align: center;
-  }
-  .education-item{
-      padding: 15px;
-      width: 80%; /* Slightly larger width on smaller screens */
-  }
-}
+
 
 /* cert Section */
 #certifications {
@@ -222,26 +223,6 @@ margin-bottom: 20px;
 }
 
 /* Responsive layout */
-@media (max-width: 768px) {
-  .certification-container {
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    max-width: calc(100% / 2 - 10px); /* Adjust for medium screens */
-}
-  #certifications h2 {
-      text-align: center;
-  }
-  .certification-item {
-      padding: 15px;
-      flex: 0 0 100%; /* Full width for smaller screens */
-      width: 80%; /* Slightly larger width on smaller screens */
-  }
-  
-}
-@media (max-width: 480px) {
-  .certification-item {
-      max-width: 100%; /* Full width on smaller screens */
-  }
-}
 
 /* Skills Section */
 #skills {
@@ -330,11 +311,6 @@ margin-bottom: 20px;
   margin-bottom: 10px;
   /* Additional styling if needed */
 }
-@media (max-width: 768px) {
-  .project-item {
-      width: 100%; /* Full width for smaller screens */
-  }
-}
  /* Experiences Section */
 #experiences {
   display: flex;
@@ -370,24 +346,111 @@ margin-bottom: 20px;
   transform: translateY(-10px); /* Creates the floating effect by moving the box up on hover */
   box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Enhances shadow on hover for depth */
 }
-@media (max-width: 960px) {
-  .experiences-category {
-    width: 100%; /* 1 column for smaller screens */
-  }
+.contact-container {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  font-family: 'Arial', sans-serif;
 }
 
- /* Contact Section */
-#contact {
-  background-color: #e0f4f4;
-    padding: 2rem;
-    text-align: center;
+.contact-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 16px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Added to include padding in width */
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group textarea {
+  min-height: 100px; /* Larger text area for messages */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+  @media (max-width: 960px) {
+    .experiences-category {
+      width: 100%; /* 1 column for smaller screens */
+    }
   }
-  .section {
-      padding: 40px 0;
-      color: #333;
-      font-family: 'Arial', sans-serif; /* Replace with your preferred font */
+  @media (max-width: 480px) {
+    .certification-item {
+        max-width: 100%; /* Full width on smaller screens */
+    }
   }
-  .contact-section:hover {
-    transform: translateY(-10px); /* Creates the floating effect by moving the box up on hover */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Enhances shadow on hover for depth */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column; /* Stacks the items vertically on smaller screens */
   }
+  .about-text, .about-image {
+      flex: none; /* Removes the flex sizing */
+      width: 100%; /* Full width */
+      padding: 10px 0; /* Adjust padding for smaller screens */
+  }
+    #education h2 {
+        text-align: center;
+    }
+    .education-item{
+        padding: 15px;
+        width: 80%; /* Slightly larger width on smaller screens */
+    }
+    .certification-container {
+      flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+      max-width: calc(100% / 2 - 10px); /* Adjust for medium screens */
+  }
+    #certifications h2 {
+        text-align: center;
+    }
+    .certification-item {
+        padding: 15px;
+        flex: 0 0 100%; /* Full width for smaller screens */
+        width: 80%; /* Slightly larger width on smaller screens */
+    }
+    .project-item {
+      width: 100%; /* Full width for smaller screens */
+  }
+  .contact-container {
+    width: 90%;
+    padding: 20px;
+}
+  }
+  
