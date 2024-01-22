@@ -242,25 +242,35 @@
 
 
     <section id="contact">
-      <div class="contact-container">
-          <h2>Contact Me</h2>
-          <form action="/send_email" method="POST">
-              <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit">Send Message</button>
-          </form>
-      </div>
-  </section>
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-form" />
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <!-- Honeypot Field (Hidden field for bot spam filtering) -->
+            <div style="display: none;">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
 
   </main>
 
