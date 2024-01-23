@@ -292,7 +292,57 @@ margin-bottom: 20px;
 #projects h2 {
   margin-bottom: 30px;
   font-size: 2.2em;
-  color: #333;
+  color: #000000;
+}
+.h3-typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid;
+  white-space: nowrap;
+  animation: typing 5s steps(20, end) infinite;
+}
+
+@keyframes typingEffect {
+  0%, 100% { width: 0; }
+  50% { width: 100%; }
+}
+
+.project-item h3 {
+  background-color: #d6e6e6; /* Earthy green */
+  margin: 0 -20px;  /* Removes the default margin */
+  padding: 10px 20px; /* Add padding for better spacing */
+  width: calc(100% + 40px);/* Width equal to the parent container plus padding */
+  margin-left: -20px; /* Aligns the background with the container's border */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  color: #000000;
+  position: relative; /* Position relative to its normal position */
+  left: -20px; /* Shift to the left to align with the container's edge */
+  transition: transform 0.3s ease;
+}
+.project-item h3 a {
+  color: #000000; /* Sets the text color */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease, transform 0.3s ease;/* Smooth transition for color and transform */
+  animation: fadeIn 2s;
+}
+.project-item h3:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+}
+.project-item h3 a:hover {
+  color: #0000FF;  /* Change the color on hover */
+  text-decoration: underline; /* Adds underline on hover */
+  transform: scale(1.05); /* Slightly increases the size */
+}
+
+.project-item h3:hover a {
+  color: #0000FF; /* Change the color on hover, fallback to black */
+  text-decoration: underline; /* Adds underline on hover */
+  transform: scale(1.05); /* Slightly increases the size */
+}
+
+.project-item p {
+  margin-top: 0; /* Removes the space between h3 and p tags */
+  padding: 20px;
 }
 .project-container {
   display: flex;
@@ -304,7 +354,7 @@ margin-bottom: 20px;
 .project-item {
   background-color: white;
   margin: 15px auto; /* Centers the box and maintains margin on top and bottom */
-  
+  overflow: hidden; 
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -312,7 +362,7 @@ margin-bottom: 20px;
   width: calc(50% - 40px); /* Ensures the width doesn’t exceed the max-width */
   margin-bottom: 20px;
   border: 1px solid #ddd;
-    padding: 20px;
+    padding: 0;
     text-align: center;
 }
 .project-item:hover {
@@ -323,6 +373,7 @@ margin-bottom: 20px;
   list-style: inside square; /* Choose the style that fits your design */
   padding-left: 20px;
   text-align: left;
+  padding: 0 20px;
 }
 .project-item ul li {
   margin-bottom: 10px;
